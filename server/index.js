@@ -61,7 +61,7 @@ app.post("/newTicket", function(req, res){
                 else res.send({status: "success"});
             })
             
-            mailer.send_mail(client_email);
+            mailer.send_mail(req);
 
         }
         else res.send({status: "invalid"});
